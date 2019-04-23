@@ -1,0 +1,268 @@
+.physic {
+	position: relative;
+	display: flex;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+}
+
+.physic__wrapper-image {	
+	width: 30%;
+	padding: 15px;
+	flex-shrink: 0;
+
+	.physic__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		border-right: 1px solid #dcdcdc;
+	}
+}
+
+.physic__info {
+	padding: 40px 30px 0 4.5%;
+}
+
+.physic__title {
+	margin-bottom: 2px;
+	font-weight: 700;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.physic__stars-rate {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+
+
+
+.physic__stars {
+	display: flex;
+	cursor: pointer;
+
+	&:hover .star,
+	&:focus .star {
+		fill: #fac917 !important;
+	}
+
+	.star {
+		padding: 2px;
+		fill: #d8d8d8;
+
+		&:hover ~ .star,
+		&:focus ~ .star {
+			fill: #d8d8d8 !important;
+		}
+	}
+
+	&[data-stars] {
+	    .star {
+	      fill: #fac917;
+	    }
+	}
+
+	&[data-stars="1"] {
+		.star:nth-child(1) ~ .star {
+			fill: #d8d8d8;
+		}
+	}
+
+	&[data-stars="2"] {
+		.star:nth-child(2) ~ .star {
+			fill: #d8d8d8;
+		}
+	}
+
+	&[data-stars="3"] {
+		.star:nth-child(3) ~ .star {
+			fill: #d8d8d8;
+		}
+	}
+
+	&[data-stars="4"] {
+		.star:nth-child(4) ~ .star {
+			fill: #d8d8d8;
+		}
+	}
+
+	&[data-stars="5"] {
+		.star:nth-child(5) ~ .star {
+			fill: #d8d8d8;
+		}
+	}
+}
+
+
+
+
+.physic__rate {
+	margin: 3px 0 0 5px;
+}
+
+.physic__text {
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.25;
+}
+
+.physic__features-item {
+	position: relative;
+	padding-left: 28px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 26px;
+
+	&::before {
+		content: url('../img/check.svg');
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.physic__link-wrapper {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.physic__link {
+	font-weight: 300;
+	font-size: 16px;
+	color: #010233;
+	text-decoration: underline;
+}
+
+
+
+.physic__more-info {
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.physic__rating {
+	align-self: flex-end;
+	display: inline-block;
+	padding: 6px 42px;
+	text-align: center;
+	font-weight: 900;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #b8b8b8;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.physic__tel {
+	align-self: center;
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+	color: inherit;
+	position: relative;
+	font-weight: 900;
+	font-size: 18px;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	&:hover > *,
+	&:focus > * {
+		color: inherit;
+	}
+
+	img {
+		margin-right: 10px;
+	}
+}
+
+.physic__visit-btn {
+	display: block;
+	padding: 14px 50px;
+	text-align: center;
+	font-weight: 900;
+	font-size: 18px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #fff;
+	background-image: linear-gradient( -45deg, rgb(143,203,255) 0%, rgb(229,132,252) 50%, rgb(143,203,255) 100%);
+	background-size: 200% 100%;
+	transition: background-position .3s;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-position: 100% 100%;
+	}
+}
+
+
+@media (max-width: 960px) {
+	.physic {
+		display: block;
+	}
+
+	.physic__wrapper-image {
+		width: 100%;
+		padding: 60px 20px 20px;
+
+		.physic__image {
+			padding: 0;
+			border-right: 0;
+		}
+	}
+
+	.physic__info {
+		padding: 20px;
+	}
+
+	.physic__rating {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.physic__link-wrapper {
+		margin: 10px;
+		margin-bottom: 0;
+	}
+
+	.physic__tel {
+		margin: 0 0 20px;
+	}
+
+	.physic__visit-btn {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 5px;
+	}
+}
+
+@media (max-width: 600px) {
+	.physic__rating {
+		padding: 3px 10px;
+	}
+
+	.physic__title {
+		font-size: 20px;
+	}
+
+	.physic__tel {
+
+		img {
+			width: 20px;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.top-physics__title {
+	padding: 40px 0 0;
+}
+
+.top-physics__desc {
+	margin-bottom: 40px;
+}
+
+.top-physics__item {
+	position: relative;
+	margin-bottom: 34px;
+}
+
+.top-physics__item--badge {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	p {
+		position: relative;
+		padding: 8px 64px 8px 50px;
+		font-weight: 900;
+		font-size: 16px;
+		color: #fff;
+		background-color: #fbbf00;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px 30px 20px 0;
+			border-color: transparent #fff transparent transparent;
+		}
+	}
+
+	img {
+		position: absolute;
+		top: -5px;
+		left: 0;
+		z-index: 1;
+		width: 45px;
+		transform: translateX(-50%);
+	}
+}
+
+.top-physics__more-btn-wrapper {
+	margin-bottom: 60px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.top-physics__more-btn {
+	color: inherit;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+@media (max-width: 600px) {
+	.top-physics__item--badge {
+
+		p {
+			padding: 7px 30px 6px 24px;
+			font-size: 14px;
+
+			&::after {
+				border-width: 17px 17px 17px 0;
+			}
+		}
+
+		img {
+			width: 39px;
+		}
+	}
+}
